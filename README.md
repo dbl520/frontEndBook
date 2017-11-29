@@ -60,9 +60,9 @@
 </body>
 </html>
 
-js常用方法
-1.输出语句：document.write(""); 
-2.JS中的注释为//
+####js常用方法
+####1.输出语句：document.write(""); 
+####2.JS中的注释为//
 3.传统的HTML文档顺序是:document->html->(head,body)
 4.一个浏览器窗口中的DOM顺序是:window->(navigator,screen,history,location,document)
 5.得到表单中元素的名称和值:document.getElementById("表单中元素的ID号").name(或value)
