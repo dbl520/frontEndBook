@@ -198,3 +198,9 @@ dateObj.setSeconds(val)设置秒 [注意:此日期时间从0开始计]
 105.parseFloat(string[,radix])强制转换成浮点型.
 106.isNaN(变量):测试是否为数值型.
 107.定义常量的关键字:const,定义变量的关键字:var
+    #小程序wxparse富文本src补全路径
+    var content = res.data.data.content;
+content = content.replace(/src=&quot;/g, "src=https://jisu.shenmikj.com");
+content = content.replace(/jpg\'\//g, "jpg'");
+content = content.replace(/.jpg&quot;\//g, `.jpg`);
+content = content.replace(/.png&quot;\//g, `.png`);
