@@ -204,3 +204,6 @@ content = content.replace(/src=&quot;/g, "src=https://jisu.shenmikj.com");
 content = content.replace(/jpg\'\//g, "jpg'");
 content = content.replace(/.jpg&quot;\//g, `.jpg`);
 content = content.replace(/.png&quot;\//g, `.png`);
+    
+   # iconfont转成小程序可使用的字体库
+   参考链接   http://blog.csdn.net/rosemarrytop/article/details/56480272             https://transfonter.org/
