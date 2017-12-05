@@ -208,6 +208,6 @@ content = content.replace(/.png&quot;\//g, `.png`);
    # iconfont转成小程序可使用的字体库
    参考链接   http://blog.csdn.net/rosemarrytop/article/details/56480272             https://transfonter.org/
  #单行css隐藏省略号
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+ 1.overflow: hidden;
+ 2.text-overflow: ellipsis;
+ 3.white-space: nowrap;
