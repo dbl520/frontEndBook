@@ -211,3 +211,11 @@ content = content.replace(/.png&quot;\//g, `.png`);
  1.overflow: hidden;
  2.text-overflow: ellipsis;
  3.white-space: nowrap;
+ 
+ 多行
+ text-overflow: -o-ellipsis-lastline;  
+overflow: hidden;  
+text-overflow: ellipsis;  
+display: -webkit-box;  
+-webkit-line-clamp: 2;  
+-webkit-box-orient: vertical; 
