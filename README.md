@@ -239,3 +239,6 @@ display: -webkit-box;
     animation: fade-in;/*动画名称*/  
     animation-duration: 1.5s;/*动画持续时间*/  
 </div>
+
+微信公众号获取用户信息
+用户授权并获取code ，使用code换取access_token 并使用access_token获取用户信息
