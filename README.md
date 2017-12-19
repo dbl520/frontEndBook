@@ -5,7 +5,7 @@
 ---
 
 **小程序图片预览，current是当前图片的src**
-
+```
 <!DOCTYPE html>
 <html lang="en" onclick="alert('html')">
 <head>
@@ -59,7 +59,7 @@
     </script>
 </body>
 </html>
-
+```
 ####js常用方法
 ####1.输出语句：document.write(""); 
 ####2.JS中的注释为//
@@ -91,14 +91,14 @@
 28.创建一个文档元素:document.createElement(),document.createTextNode()
 29.得到元素的方法:document.getElementById()
 30.设置表单中所有文本型的成员的值为空:
-
+```
 var form = window.document.forms[0]
 for (var i = 0; i<form.elements.length;i++){
      if (form.elements[i].type == "text"){
          form.elements[i].value = "";
      }
 }
-
+```
 31.复选按钮在JS中判断是否选中:document.forms[0].checkThis.checked (checked属性代表为是否选中返回TRUE或FALSE)
 32.单选按钮组(单选按钮的名称必须相同):取单选按钮组的长度document.forms[0].groupName.length
 33.单选按钮组判断是否被选中也是用checked.
@@ -199,19 +199,21 @@ dateObj.setSeconds(val)设置秒 [注意:此日期时间从0开始计]
 106.isNaN(变量):测试是否为数值型.
 107.定义常量的关键字:const,定义变量的关键字:var
     #小程序wxparse富文本src补全路径
+    ```
     var content = res.data.data.content;
-content = content.replace(/src=&quot;/g, "src=https://jisu.shenmikj.com");
-content = content.replace(/jpg\'\//g, "jpg'");
-content = content.replace(/.jpg&quot;\//g, `.jpg`);
-content = content.replace(/.png&quot;\//g, `.png`);
-    
+    content = content.replace(/src=&quot;/g, "src=https://jisu.shenmikj.com");
+    content = content.replace(/jpg\'\//g, "jpg'");
+    content = content.replace(/.jpg&quot;\//g, `.jpg`);
+    content = content.replace(/.png&quot;\//g, `.png`);
+    ```
    # iconfont转成小程序可使用的字体库
    参考链接   http://blog.csdn.net/rosemarrytop/article/details/56480272             https://transfonter.org/
  #单行css隐藏省略号
+ ```
  1.overflow: hidden;
  2.text-overflow: ellipsis;
  3.white-space: nowrap;
- 
+ ```
  多行
  ```
  text-overflow: -o-ellipsis-lastline;  
