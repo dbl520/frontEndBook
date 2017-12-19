@@ -213,17 +213,18 @@ content = content.replace(/.png&quot;\//g, `.png`);
  3.white-space: nowrap;
  
  多行
+ ```
  text-overflow: -o-ellipsis-lastline;  
 overflow: hidden;  
 text-overflow: ellipsis;  
 display: -webkit-box;  
 -webkit-line-clamp: 2;  
 -webkit-box-orient: vertical; 
-
-
+```
+```
 <div>catchtap='preventClose' 小程序阻止冒泡事件</div>
-
-
+```
+```
 <div>
   @keyframes fade-in {  
     0% {opacity: 0;}/*初始状态 透明度为0*/  
@@ -239,6 +240,6 @@ display: -webkit-box;
     animation: fade-in;/*动画名称*/  
     animation-duration: 1.5s;/*动画持续时间*/  
 </div>
-
+```
 微信公众号获取用户信息
 用户授权并获取code ，使用code换取access_token 并使用access_token获取用户信息
