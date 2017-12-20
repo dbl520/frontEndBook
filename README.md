@@ -246,3 +246,44 @@ display: -webkit-box;
 微信公众号获取用户信息
 用户授权并获取code ，使用code换取access_token 并使用access_token获取用户信息
     小程序里 ```<text>你好\n测试</text>``` 这样操作会换行
+
+```
+微信小程序中使用的布局还有样式，使用到的是前端的 css 
+css 的样式可以写在 style 里面
+
+
+属性
+
+width: fit-content;
+font-size:20px;      /*设置文字字号*/
+color:red;           /*设置文字颜色*/
+font-weight:bold;    /*设置字体加粗*/
+border:1px solid red;/*添加边框样式（粗细为1px， 颜色为红色的实线）*/
+font-family:"宋体";   /*设置字体为宋体*/
+
+font-style:italic;    /*文字排版--斜体*/
+text-decoration:underline;   /*文字排版--下划线*/
+text-decoration:line-through;/*文字排版--删除线*/
+text-indent:2em;             /*段落排版--缩进*/
+line-height:1.5em;           /*段落排版--行间距（行高）*/
+letter-spacing:50px;         /*段落排版--中文字间距*/
+word-spacing:50px;           /*字母间距*/
+text-align:center;  right ; left ;  /*段落排版--对齐*/
+
+display:inline-flex;        /*将对象作为内联块级弹性伸缩盒显示*/
+display:block;              /*设置为块状元素*/
+display:inline;             /*设置为内联元素*/
+display:inline-block;       /*设置为内联块状元素*/
+
+word-break:keep-all;        /* 不换行 */ 
+white-space:nowrap;         /* 不换行 */ 
+vertical-align:middle;     /*把此元素放置在父元素的中部。*/
+
+border-style（边框样式）常见样式有：  （border-color,border-width） 边框相关设置
+dashed（虚线）| dotted（点线）| solid（实线）。
+border-bottom border-top border-right border-left 上下左右线单独设置
+
+box-sizing: border-box; //当使用padding的时候不影响大小
+padding-top padding-right padding-bottom padding-left
+margin-top margin-right margin-bottom margin-left (margin:10px 10px 10px 10px; top、right、bottom、left)
+```
