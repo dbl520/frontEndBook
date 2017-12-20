@@ -245,3 +245,4 @@ display: -webkit-box;
 ```
 微信公众号获取用户信息
 用户授权并获取code ，使用code换取access_token 并使用access_token获取用户信息
+    小程序里 ```<text>你好\n测试</text>``` 这样操作会换行
