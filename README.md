@@ -287,3 +287,24 @@ box-sizing: border-box; //当使用padding的时候不影响大小
 padding-top padding-right padding-bottom padding-left
 margin-top margin-right margin-bottom margin-left (margin:10px 10px 10px 10px; top、right、bottom、left)
 ```
+<view class='nav-item flex-row a-center j-center rpx32  {{current==index?"activeColor":""}}' bindtap='tabIndex' data-index="{{index}}">
+        {{item}}
+        <image src='../../images/icons/sort.png' class='sort-image' wx:if="{{current!=index }}"></image>
+        <image src='../../images/icons/sort-aes.png' class='sort-image' wx:elif='{{current==index && orderBy == 1}}'></image>
+        <image src='../../images/icons/sort-des.png' class='sort-image'  wx:elif='{{current==index && orderBy == 0}}'></image>
+      </view>
+      js部分
+        // tab列表展示
+  tabselect:function(e){
+    var that =this;
+    var index = e.currentTarget.dataset.index
+    console.log(e)
+    console.log(index)
+    that.setData({
+      current:index,
+      orderbuy: that.data.current != index ? 1 : 1 - that.data.orderbuy
+    })
+  },
+```
+
+```
