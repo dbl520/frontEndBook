@@ -308,3 +308,17 @@ margin-top margin-right margin-bottom margin-left (margin:10px 10px 10px 10px; t
     })
   },
 ```
+```
+小程序中在scroll-view下文字换行并且二行省略
+    font-size: 28rpx;
+  color: #353535;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-top: 20rpx;
+  width: 280rpx;
+  white-space:normal; 
+  word-break:break-all;
+
+```
