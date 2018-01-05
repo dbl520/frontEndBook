@@ -322,4 +322,10 @@ margin-top margin-right margin-bottom margin-left (margin:10px 10px 10px 10px; t
 
 ```
 
-
+#小程序视频组件
+```
+video{
+  width: 100%;
+  display: block;
+}
+```
