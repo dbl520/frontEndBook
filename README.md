@@ -329,3 +329,12 @@ video{
   display: block;
 }
 ```
+#小程序遮罩层不滚动
+
+```
+.showhome {
+  height: 100vh;
+  overflow: hidden;
+}
+
+```
