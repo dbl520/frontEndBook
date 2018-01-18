@@ -338,3 +338,30 @@ video{
 }
 
 ```
+```
+解决微信小程序滚动穿透问题
+<view bindtap="hideCoupon" class='coupon_receive_wrapper {{showCouponFlag==true?"active":""}}' catchtouchmove="preventD">
+...
+</view>
+
+
+复制代码
+.coupon_receive_wrapper{
+  display:none;
+  position:fixed;
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,.5);
+  z-index:11;
+  transition: all 1s ease;
+}
+.coupon_receive_wrapper.active{
+  display:block;
+}
+js部分
+preventD:function(){}
+```
