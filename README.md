@@ -365,3 +365,10 @@ video{
 js部分
 preventD:function(){}
 ```
+```
+  小程序网络设置
+ "networkTimeout": {
+    "request": 60000,
+    "downloadFile": 60000
+  }
+```
