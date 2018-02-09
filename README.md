@@ -433,4 +433,28 @@ preventD:function(){}
 链接：https://juejin.im/post/5a7a9a545188257a892998ef
 来源：掘金
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+```
+
+```
+解决移动端1px问题
+.block {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      position: relative;
+      /*border: 1px solid red;*/
+}
+.block:before {
+      content: '';
+      position: absolute;
+      transform-origin: 0 0;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      border: 1px solid red;
+      transform: scale(.5);
+}
+
 ```
