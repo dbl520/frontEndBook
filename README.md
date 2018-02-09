@@ -372,3 +372,65 @@ preventD:function(){}
     "downloadFile": 60000
   }
 ```
+```
+块级元素居中 html代码部分
+<div class="parent">
+   <div class="child">child</div>
+</div>
+行内元素居中 html代码部分
+<div class="parent">
+   <span class="child">child</span>
+</div>
+
+
+04 块级元素：绝对定位 + margin: auto;
+
+优点：不需要提前知道尺寸，兼容性好
+缺点：这个方法是我最喜欢用的一个，要说缺点的话，我目前还不知道。
+此方法出自张鑫旭老师的博客 小tip: margin:auto实现绝对定位元素的水平垂直居中
+
+.parent {
+    position: relative;
+    height: 200px;
+}
+.child {
+    width: 80px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: blue;
+}
+
+01 行内元素（单行文字垂直居中）：设置 line-height = height
+.parent {
+   height: 200px;
+   line-height: 200px;
+   border: 1px solid red;
+}
+
+
+07 块级元素：display: flex
+
+缺点：兼容性不好
+
+.parent {
+    width: 600px;
+    height: 200px;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;  /*水平居中*/
+}
+.child {
+    background: blue;
+}
+
+作者：Suplum
+链接：https://juejin.im/post/5a7a9a545188257a892998ef
+来源：掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+```
