@@ -458,3 +458,7 @@ preventD:function(){}
 }
 
 ```
+new Date().toLocaleString() //时间戳转字符串
+```
+
+```
