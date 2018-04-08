@@ -482,6 +482,4 @@ var myObj = Object.create({}, {
 });
 myObj.foo = 1;
 console.log(Object.keys(myObj)); // console: ['foo']
-
- 
 ```
