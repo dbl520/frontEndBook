@@ -483,3 +483,19 @@ var myObj = Object.create({}, {
 myObj.foo = 1;
 console.log(Object.keys(myObj)); // console: ['foo']
 ```
+```
+数组对象排序
+var arr = [{name: "zlw", age: 24}, {name: "wlz", age: 25}];
+var compare = function (obj1, obj2) {
+    var val1 = obj1.name;
+    var val2 = obj2.name;
+    if (val1 < val2) {
+        return -1;
+    } else if (val1 > val2) {
+        return 1;
+    } else {
+        return 0;
+    }            
+} 
+console.log(arr.sort(compare));
+```
