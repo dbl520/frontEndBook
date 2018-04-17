@@ -499,3 +499,11 @@ var compare = function (obj1, obj2) {
 } 
 console.log(arr.sort(compare));
 ```
+
+```
+   var newarray = Object.keys(res.data.data.heroData.heroInfo.equipname);
+        var len = newarray.length;
+        var skillvalue = res.data.data.heroData.heroInfo.equipname[Object.keys(res.data.data.heroData.heroInfo.equipname)[len - 1]]
+        var skillvalue2 = res.data.data.heroData.heroInfo.equipname[Object.keys(res.data.data.heroData.heroInfo.equipname)[0]]
+        var skill = newarray[len - 1];
+```
