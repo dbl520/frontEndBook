@@ -507,3 +507,9 @@ console.log(arr.sort(compare));
         var skillvalue2 = res.data.data.heroData.heroInfo.equipname[Object.keys(res.data.data.heroData.heroInfo.equipname)[0]]
         var skill = newarray[len - 1];
 ```
+
+
+```
+正则把数字字符串变成number
+ str = str.replace(/\"/g, "");  //正则去掉""
+```
