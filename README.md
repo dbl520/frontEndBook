@@ -511,5 +511,5 @@ console.log(arr.sort(compare));
 
 ```
 正则把数字字符串变成number
- str = str.replace(/\"/g, "");  //正则去掉""
+  str = str.replace(/\"/g, "");  //正则去掉""
 ```
