@@ -513,3 +513,10 @@ console.log(arr.sort(compare));
 正则把数字字符串变成number
   str = str.replace(/\"/g, "");  //正则去掉""
 ```
+
+```
+var Str = '1:00:00'
+var Temp = Str.split(':')
+var Seconds = 3600 * Number(Temp[0]) + 60 * Number(Temp[1]) + Number(Temp[2])
+console.log(Seconds)
+```
