@@ -520,3 +520,18 @@ var Temp = Str.split(':')
 var Seconds = 3600 * Number(Temp[0]) + 60 * Number(Temp[1]) + Number(Temp[2])
 console.log(Seconds)
 ```
+```
+   // //  随机4个不重复的数据
+    // function getRandomArrayElements(arr, count) {
+    //   var shuffled = arr.slice(0), i = arr.length, min = i - count, temp, index;
+    //   while (i-- > min) {
+    //     index = Math.floor((i + 1) * Math.random());
+    //     temp = shuffled[index];
+    //     shuffled[index] = shuffled[i];
+    //     shuffled[i] = temp;
+    //   }
+    //   return shuffled.slice(min);
+    // }
+
+    // console.log(getRandomArrayElements(newid, wx.getStorageSync("mydata")));
+```
