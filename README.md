@@ -535,3 +535,7 @@ console.log(Seconds)
 
     // console.log(getRandomArrayElements(newid, wx.getStorageSync("mydata")));
 ```
+
+```
+ vscode配置token    40348c46f90cce406e734b1692b6879e1927d039 
+```
