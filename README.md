@@ -539,3 +539,8 @@ console.log(Seconds)
 ```
  vscode配置token     3087a62753b4f9325eaac164b8a8284b51bd6e49
 ```
+
+```
+es6数组去重
+[...new Set(getData)]
+```
