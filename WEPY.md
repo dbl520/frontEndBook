@@ -1,5 +1,5 @@
 # WEPY
-## 小程序图片预览，current是当前图片的src**
+## WEPY
 ```
   this.$apply();
   组件传值 this.$broadcast('some-event','6666')
