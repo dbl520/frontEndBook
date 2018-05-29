@@ -1,6 +1,6 @@
 # GitBook
 
-# 前端资料
+# 前端知识点
 
 ---
 
@@ -544,3 +544,43 @@ console.log(Seconds)
 es6数组去重
 [...new Set(getData)]
 ```
+
+# ES6相关
+```
+        块级作用区域 let a = 1;
+    可定义常量 const PI = 3.141592654;
+    变量解构赋值 var [a, b, c] = [1, 2, 3];
+    字符串的扩展(模板字符串) var sum =${a + b};
+    数组的扩展(转换数组类型) Array.from($('li'));
+    函数的扩展(扩展运算符) [1, 2].push(...[3, 4, 5]);
+    对象的扩展(同值相等算法) Object.is(NaN, NaN);
+    新增数据类型(Symbol) let uid = Symbol('uid');
+    新增数据结构(Map) let set = new Set([1, 2, 2, 3]);
+    for...of循环 for(let val of arr){};
+    Promise对象 var promise = new Promise(func);
+    Generator函数 function* foo(x){yield x; return x*x;}
+    引入Class(类) class Foo {}
+    引入模块体系 export default func;
+    引入async函数[ES7]
+    async function asyncPrint(value, ms) {
+          await timeout(ms);
+          console.log(value)
+         }
+         Promise 的构造函数
+
+构造一个 Promise，最基本的用法如下：
+var promise = new Promise(function(resolve, reject) {
+
+        if (...) {  // succeed
+
+            resolve(result);
+
+        } else {   // fails
+
+            reject(Error(errMessage));
+
+        }
+    });
+```
+
+
