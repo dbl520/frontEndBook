@@ -1,4 +1,4 @@
-# WEPY
+# <a href="https://tencent.github.io/wepy/document.html">WEPY</a>
 ## WEPY
 ```
   this.$apply();
