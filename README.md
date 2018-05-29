@@ -60,12 +60,13 @@
 </body>
 </html>
 ```
-####js常用方法
-####1.输出语句：document.write(""); 
-####2.JS中的注释为//
-3.传统的HTML文档顺序是:document->html->(head,body)
-4.一个浏览器窗口中的DOM顺序是:window->(navigator,screen,history,location,document)
-5.得到表单中元素的名称和值:document.getElementById("表单中元素的ID号").name(或value)
+# js常用方法
+# 1.输出语句：document.write(""); 
+# 2.JS中的注释为//
+# 3.传统的HTML文档顺序是:document->html->(head,body)
+# 4.一个浏览器窗口中的DOM顺序是:window->(navigator,screen,history,location,document)
+# 5.得到表单中元素的名称和值:document.getElementById("表单中元素的ID号").name(或value)
+```
 6.一个小写转大写的JS: document.getElementById("output").value = document.getElementById("input").value.toUpperCase();
 7.JS中的值类型:String,Number,Boolean,Null,Object,Function
 8.JS中的字符型转换成数值型:parseInt(),parseFloat()
@@ -92,12 +93,14 @@
 29.得到元素的方法:document.getElementById()
 30.设置表单中所有文本型的成员的值为空:
 ```
+```
 var form = window.document.forms[0]
 for (var i = 0; i<form.elements.length;i++){
      if (form.elements[i].type == "text"){
          form.elements[i].value = "";
      }
 }
+```
 ```
 31.复选按钮在JS中判断是否选中:document.forms[0].checkThis.checked (checked属性代表为是否选中返回TRUE或FALSE)
 32.单选按钮组(单选按钮的名称必须相同):取单选按钮组的长度document.forms[0].groupName.length
@@ -198,7 +201,7 @@ dateObj.setSeconds(val)设置秒 [注意:此日期时间从0开始计]
 105.parseFloat(string[,radix])强制转换成浮点型.
 106.isNaN(变量):测试是否为数值型.
 107.定义常量的关键字:const,定义变量的关键字:var
-    #小程序wxparse富文本src补全路径
+# 小程序wxparse富文本src补全路径
 ```
     var content = res.data.data.content;
     content = content.replace(/src=&quot;/g, "src=https://jisu.shenmikj.com");
@@ -206,8 +209,7 @@ dateObj.setSeconds(val)设置秒 [注意:此日期时间从0开始计]
     content = content.replace(/.jpg&quot;\//g, `.jpg`);
     content = content.replace(/.png&quot;\//g, `.png`);
 ```
- 
- #单行css隐藏省略号
+ # 单行css隐藏省略号
  ```
  1.overflow: hidden;
  2.text-overflow: ellipsis;
@@ -216,28 +218,28 @@ dateObj.setSeconds(val)设置秒 [注意:此日期时间从0开始计]
  多行
  ```
  text-overflow: -o-ellipsis-lastline;  
-overflow: hidden;  
-text-overflow: ellipsis;  
-display: -webkit-box;  
--webkit-line-clamp: 2;  
--webkit-box-orient: vertical; 
+ overflow: hidden;  
+ text-overflow: ellipsis;  
+ display: -webkit-box;  
+ -webkit-line-clamp: 2;  
+ -webkit-box-orient: vertical; 
 ```
 ```
 <div>catchtap='preventClose' 小程序阻止冒泡事件</div>
 ```
 ```
 <div>
-  @keyframes fade-in {  
+    @keyframes fade-in {  
     0% {opacity: 0;}/*初始状态 透明度为0*/  
     40% {opacity: 0;}/*过渡状态 透明度为0*/  
     100% {opacity: 1;}/*结束状态 透明度为1*/  
-}  
-@-webkit-keyframes fade-in {/*针对webkit内核*/  
+    }  
+    @-webkit-keyframes fade-in {/*针对webkit内核*/  
     0% {opacity: 0;}  
     40% {opacity: 0;}  
     100% {opacity: 1;}  
-}  
-#wrapper {    
+    }  
+    #wrapper {    
     animation: fade-in;/*动画名称*/  
     animation-duration: 1.5s;/*动画持续时间*/  
 </div>
@@ -460,12 +462,11 @@ preventD:function(){}
 ```
 new Date().toLocaleString() //时间戳转字符串
 ```
-
 ```
 // simple array
 var arr = ['a', 'b', 'c'];
 console.log(Object.keys(arr)); // console: ['0', '1', '2']
-
+```
 // array like object
 var obj = { 0: 'a', 1: 'b', 2: 'c' };
 console.log(Object.keys(obj)); // console: ['0', '1', '2']
@@ -482,6 +483,7 @@ var myObj = Object.create({}, {
 });
 myObj.foo = 1;
 console.log(Object.keys(myObj)); // console: ['foo']
+```
 ```
 ```
 数组对象排序
@@ -548,39 +550,43 @@ es6数组去重
 # ES6相关
 ```
         块级作用区域 let a = 1;
-    可定义常量 const PI = 3.141592654;
-    变量解构赋值 var [a, b, c] = [1, 2, 3];
-    字符串的扩展(模板字符串) var sum =${a + b};
-    数组的扩展(转换数组类型) Array.from($('li'));
-    函数的扩展(扩展运算符) [1, 2].push(...[3, 4, 5]);
-    对象的扩展(同值相等算法) Object.is(NaN, NaN);
-    新增数据类型(Symbol) let uid = Symbol('uid');
-    新增数据结构(Map) let set = new Set([1, 2, 2, 3]);
-    for...of循环 for(let val of arr){};
-    Promise对象 var promise = new Promise(func);
-    Generator函数 function* foo(x){yield x; return x*x;}
-    引入Class(类) class Foo {}
-    引入模块体系 export default func;
-    引入async函数[ES7]
-    async function asyncPrint(value, ms) {
-          await timeout(ms);
-          console.log(value)
-         }
-         Promise 的构造函数
-
-构造一个 Promise，最基本的用法如下：
-var promise = new Promise(function(resolve, reject) {
-
-        if (...) {  // succeed
-
-            resolve(result);
-
-        } else {   // fails
-
-            reject(Error(errMessage));
-
+        可定义常量 const PI = 3.141592654;
+        变量解构赋值 var [a, b, c] = [1, 2, 3];
+        字符串的扩展(模板字符串) var sum =${a + b};
+        数组的扩展(转换数组类型) Array.from($('li'));
+        函数的扩展(扩展运算符) [1, 2].push(...[3, 4, 5]);
+        对象的扩展(同值相等算法) Object.is(NaN, NaN);
+        新增数据类型(Symbol) let uid = Symbol('uid');
+        新增数据结构(Map) let set = new Set([1, 2, 2, 3]);
+        for...of循环 for(let val of arr){};
+        Promise对象 var promise = new Promise(func);
+        Generator函数 function* foo(x){yield x; return x*x;}
+        引入Class(类) class Foo {}
+        引入模块体系 export default func;
+        引入async函数[ES7]
+        async function asyncPrint(value, ms) {
+        await timeout(ms);
+        console.log(value)
         }
-    });
+        
+
 ```
 
+# Promise 的构造函数
 
+构造一个 Promise，最基本的用法如下：
+
+    ```
+       var promise = new Promise(function(resolve, reject) {
+
+            if (...) {  // succeed
+
+                resolve(result);
+
+            } else {   // fails
+
+                reject(Error(errMessage));
+
+            }
+        });
+```
