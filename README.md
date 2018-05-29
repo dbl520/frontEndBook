@@ -568,15 +568,12 @@ es6数组去重
         await timeout(ms);
         console.log(value)
         }
-        
+ ```
+    
+
+# Promise 的构造函数 构造一个 Promise，最基本的用法如下：    
 
 ```
-
-# Promise 的构造函数
-
-构造一个 Promise，最基本的用法如下：
-
-    ```
        var promise = new Promise(function(resolve, reject) {
 
             if (...) {  // succeed
