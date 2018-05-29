@@ -1,7 +1,7 @@
 # GitBook
 
 # 前端知识点
-
+<img src="http://tylingsoft.com/img/mdm/icon.png" height="64px"/>
 ---
 
 **小程序图片预览，current是当前图片的src**
