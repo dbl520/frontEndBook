@@ -633,7 +633,7 @@ es6数组去重
     // timestamp 类似结束时间 2018-5-24 10:00
   getCountDown: function (timestamp) {
     var countdownMinute = 10;//10分钟倒计时
-    var startTimes = new Date('2018-6-1 17:27');//开始时间 new Date('2016-11-16 15:21');
+    var startTimes = new Date(timestamp);//开始时间 new Date('2016-11-16 15:21');
     var endTimes = new Date(startTimes.setMinutes(startTimes.getMinutes() + countdownMinute));//结束时间
     var curTimes = new Date();//当前时间
     var surplusTimes = endTimes.getTime() / 1000 - curTimes.getTime() / 1000;//结束毫秒-开始毫秒=剩余倒计时间
@@ -723,6 +723,6 @@ module.exports = {
             + minute.substring(minute.length-2, minute.length) + ":"  
             + second.substring(second.length-2, second.length);  
  }  
-console.log(formatUnixtimestamp(1527845940298))
+console.log(formatUnixtimestamp(1527845940298)) 
 
 ``` 
