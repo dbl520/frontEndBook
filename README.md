@@ -629,7 +629,7 @@ es6数组去重
     },
 ```
 # 10分钟倒计时
-```
+
     // timestamp 类似结束时间 2018-5-24 10:00
   getCountDown: function (timestamp) {
     var countdownMinute = 10;//10分钟倒计时
@@ -653,7 +653,7 @@ es6数组去重
   },
 ```
  # js 格式化时间
-```
+
    var date = {
 
   /**
@@ -709,7 +709,7 @@ module.exports = {
 }
 ```
  # js 时间戳转  2018-06-01 17:39:00
-``` 
+
  function formatUnixtimestamp (unixtimestamp){  
         var unixtimestamp = new Date(unixtimestamp);  
         var year = 1900 + unixtimestamp.getYear();  
