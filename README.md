@@ -587,3 +587,124 @@ es6数组去重
             }
         });
 ```
+# js倒计时
+```
+    // timestamp 类似结束时间 2018-5-24 10:00
+    getCountDown: function (timestamp) {
+      var that = this;
+      clearInterval(newinterval)
+      newinterval = setInterval(function () {
+        var nowTime = new Date();
+        var endTime = new Date(timestamp);
+        var t = endTime.getTime() - nowTime.getTime();
+        if (t > 0) {
+          // var hour = Math.floor(t / 1000 / 60 / 60 % 24);
+          var hour = Math.floor(t / 1000 / 60 / 60);
+          var min = Math.floor(t / 1000 / 60 % 60);
+          var sec = Math.floor(t / 1000 % 60);
+
+          if (hour < 10) {
+            hour = "0" + hour;
+          }
+          if (min < 10) {
+            min = "0" + min;
+          }
+          if (sec < 10) {
+            sec = "0" + sec;
+          }
+          that.setData({
+            sign: '(' + hour + ":" + min + ":" + sec + ')' + '\t' + '签到',
+            // signLayer: 1,
+          })
+          console.log(hour + ":" + min + ":" + sec)
+        } else {
+          that.setData({
+            sign: '(' + 0 + ":" + 0 + ":" + 0 + ')' + '\t' + '签到',
+            // signLayer: 1,
+          })
+          clearInterval(newinterval)
+        }
+      }, 1000)
+
+    },
+```
+# 10分钟倒计时
+```
+    // timestamp 类似结束时间 2018-5-24 10:00
+  getCountDown: function (timestamp) {
+    var countdownMinute = 10;//10分钟倒计时
+    var startTimes = new Date('2018-6-1 17:27');//开始时间 new Date('2016-11-16 15:21');
+    var endTimes = new Date(startTimes.setMinutes(startTimes.getMinutes() + countdownMinute));//结束时间
+    var curTimes = new Date();//当前时间
+    var surplusTimes = endTimes.getTime() / 1000 - curTimes.getTime() / 1000;//结束毫秒-开始毫秒=剩余倒计时间
+
+    // 进入倒计时
+    countdowns = window.setInterval(function () {
+      surplusTimes--;
+      var minu = Math.floor(surplusTimes / 60);
+      var secd = Math.round(surplusTimes % 60);
+      console.log(minu + ':' + secd);
+      if (surplusTimes <= 0) {
+        console.log('时间到！');
+        clearInterval(countdowns);
+      }
+    }, 1000); 
+
+  },
+```
+ # js 格式化时间
+```
+   var date = {
+
+  /**
+ * 时间戳转换成格式化时间
+ */
+  formatTime: function (timestamp) {
+    // var date = new Date(timestamp * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+    var date = getDate(timestamp * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+    Y = date.getFullYear() + '年';
+    M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '月';
+    var D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + '日';
+    return M + D;
+  },
+
+  /**
+ * 时间戳转换成格式化时间
+ */
+  formatTime2: function (timestamp, format) {
+    var date = getDate(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+    Y = date.getFullYear() + '-';
+    M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+    D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+    h = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours()) + ':';
+    m = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes() + '';
+    s = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds();
+
+    switch (format) {
+      case 'Y-M-D h:m':
+        return Y + M + D + ' ' + h + m;
+        break;
+      case 'Y-M-D':
+        return Y + M + D;
+        break;
+      case 'M-D':
+        return M + '-' + D;
+        break;
+      case 'h:m':
+        return h + m;
+        break;
+      case 'Y月D日 h:m':
+        return M + '月' + D + '日 ' + h + m;
+        break;
+    }
+  },
+
+
+
+}
+
+module.exports = {
+  getDate: date.formatTime,
+  getDate2: date.formatTime2,
+}
+```
