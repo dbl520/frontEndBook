@@ -127,3 +127,7 @@ es6数组去重
             }
         });
 ```
+# vue三元运算符绑定样式
+```
+ <div v-bind:class="[isActive ? activeClass : '', errorClass]"></div>
+```
