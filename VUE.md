@@ -131,3 +131,7 @@ es6数组去重
 ```
  <div v-bind:class="[isActive ? activeClass : '', errorClass]"></div>
 ```
+ # vue实例
+```
+this.$vm
+```
