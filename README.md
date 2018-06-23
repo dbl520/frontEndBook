@@ -758,3 +758,9 @@ indexOf去重
     }
     find(arr);
 ```
+```
+var jsonString = '{"bar":"property","baz":3}';
+var jsObject = JSON.parse(jsonString); //转换为json对象
+alert(jsObject.bar); //取json中的值
+var st = JSON.stringify(jsObject); //转换为json类型的字符串
+```
