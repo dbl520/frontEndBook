@@ -1,13 +1,27 @@
 # GitBook
-
+#获取今天明天后天
+```
+  GetDateStr(0);//今天
+  GetDateStr(1);//明天
+  GetDateStr(2);//后天
+      // 获取今天明天后天
+    GetDateStr(AddDayCount) {
+      var dd = new Date();
+      dd.setDate(dd.getDate() + AddDayCount); //获取AddDayCount天后的日期
+      var y = dd.getFullYear();
+      var m = dd.getMonth() + 1; //获取当前月份的日期
+      var d = dd.getDate();
+      return y + "-" + m + "-" + d;
+    },
+```
 # 前端知识点
   # 数组去重
 ```
-  var arr = [2,3,4,4,5,2,3,6];
-var arr2 = arr.filter(function(element,index,self){
-return self.indexOf(element) === index;
-});
-console.log(arr2);
+    var arr = [2,3,4,4,5,2,3,6];
+    var arr2 = arr.filter(function(element,index,self){
+    return self.indexOf(element) === index;
+    });
+    console.log(arr2);
 ```
 ```
 java  环境变量
