@@ -1,7 +1,8 @@
 # GitBook
 #获取今天明天后天
 ```
-  GetDateStr(0);//今天
+  //类似2018-7-9
+  GetDateStr(0);//今天()
   GetDateStr(1);//明天
   GetDateStr(2);//后天
       // 获取今天明天后天
