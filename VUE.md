@@ -1,5 +1,9 @@
 # GitBook
-
+# NPM
+```
+   npm install -g cnpm --registry=https://registry.npm.taobao.org
+   npm config set registry https://registry.npm.taobao.org
+```
 # VUE
 ```
   // 命名路由，append 属性，查询参数，router-link渲染成<li>标签
