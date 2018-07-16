@@ -1,9 +1,23 @@
 # GitBook
 
 # 前端知识点
+# BEM  命名规范
+#  BEM的命名规矩很容易记：block-name__element-name--modifier-name，也就是模块名 + 元素名 + 修饰器名。
 <img src="http://tylingsoft.com/img/mdm/icon.png" height="64px"/>
 ---
+```
+  比如分页组件：
 
+/app/components/page-btn/
+
+那么该组件模块就名为page-btn，组件内部的元素命名都必须加上模块名，比如：
+
+<div class="page-btn">
+   <button type="button" class="page-btn__prev">上一页</button>
+   <!-- ... -->
+   <button type="button" class="page-btn__next">下一页</button>
+</div>
+```
 **小程序图片预览，current是当前图片的src**
 ```
 <!DOCTYPE html>
