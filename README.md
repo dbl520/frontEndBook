@@ -3,8 +3,6 @@
 # 前端知识点
 # BEM  命名规范
 #  BEM的命名规矩很容易记：block-name__element-name--modifier-name，也就是模块名 + 元素名 + 修饰器名。
-<img src="http://tylingsoft.com/img/mdm/icon.png" height="64px"/>
----
 ```
   比如分页组件：
 
@@ -18,6 +16,9 @@
    <button type="button" class="page-btn__next">下一页</button>
 </div>
 ```
+<img src="http://tylingsoft.com/img/mdm/icon.png" height="64px"/>
+---
+
 **小程序图片预览，current是当前图片的src**
 ```
 <!DOCTYPE html>
