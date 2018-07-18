@@ -5,6 +5,7 @@
    npm config set registry https://registry.npm.taobao.org
 ```
 # VUE
+vue  二种父组件向子组件动态传值 1是props  2是用this.$refs.refName.方法
 ```
   // 命名路由，append 属性，查询参数，router-link渲染成<li>标签
 <router-link tag="li" :to="{name:'demandindex', append:true,  query: {isFormBackend: 1}, activeClass: 'bottom-nav-active'}">
