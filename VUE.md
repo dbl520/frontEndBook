@@ -4,6 +4,20 @@
    npm install -g cnpm --registry=https://registry.npm.taobao.org
    npm config set registry https://registry.npm.taobao.org
 ```
+定时器问题 如果定时器的this.timer不再其他地方使用可改写成使用 let timer = setInterval(()=>{}) this.$once('hook:beforeDestroy',()=>{ clearInterval(timer) }) 好处是让代码更清晰，在哪里开始就在那里结束。能有效的避免使用无用的this.timer而产生的$data臃肿。
+
+使用 CSS3 滤镜 filter 中的 drop-shadow。
+
+drop-shadow 滤镜可以给元素或图片非透明区域添加投影
+将背景透明的 PNG 图标施加一个不带模糊的投影，就等同于生成了另外一个颜色的图标
+再通过 overflow:hidden 和位移处理将原图标隐藏
+
+作者：小小茂茂
+链接：https://juejin.im/post/5b607a0b6fb9a04fd260aa70
+来源：掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+
 # VUE
 vue  二种父组件向子组件动态传值 1是props  2是用this.$refs.refName.方法
 ```
